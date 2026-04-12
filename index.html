@@ -58,14 +58,24 @@ Here's how you know ▼
 <p><b>Mabruenian Central Time</b></p>
 
 <script>
-function updateClock() {
-  var now = new Date();
-  var time = now.toLocaleTimeString();
-  document.getElementById("clock").innerHTML = time;
-}
+  function updateClock() {
+    // New Mexico is UTC-6 during Daylight Savings (MDT) and UTC-7 otherwise (MST)
+    // This uses 'en-US' and the 'America/Denver' time zone to stay accurate automatically
+    var options = {
+      timeZone: 'America/Denver',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    };
+    
+    var now = new Date();
+    var mabrueniaTime = now.toLocaleTimeString('en-US', options);
+    document.getElementById("clock").innerHTML = mabrueniaTime;
+  }
 
-setInterval(updateClock, 1000);
-updateClock();
+  setInterval(updateClock, 1000);
+  updateClock();
 </script>
 
 <b>Navigation</b>

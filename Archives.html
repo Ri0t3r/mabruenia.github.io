@@ -1,6 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Royal Archives</title>
+<link rel="stylesheet" href="style.css">
 
 <script>
 function searchArchives() {
@@ -16,58 +19,172 @@ function searchArchives() {
 
 </head>
 
-<body bgcolor="#C0C0C0" text="#000000" link="#0000FF" vlink="#800080">
+<body>
 
-<h1>Mabruenian Royal Archives</h1>
+<div class="site-header">
+  <h1>Mabruenian Royal Archives</h1>
+</div>
+
+<table class="main-table">
+<tr>
+
+<td class="sidebar">
+
+<img src="images/flag.webp" class="flag-large">
+
+<p class="small-text">Official Government Site</p>
+
+<hr>
+
+<b>Navigation</b>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="Archives.html">National Archives</a></li>
+<li><a href="Decrees.html">Royal Decrees</a></li>
+<li><a href="Offices.html">Government Offices</a></li>
+<li><a href="foreign.html">Foreign Affairs</a></li>
+<li><a href="landclaims.html">Land Claims</a></li>
+<li><a href="symbols.html">National Symbols</a></li>
+<li><a href="siteindex.html">Site Index</a></li>
+<li><a href="forum.html">Government Forum</a></li>
+<li><a href="privacy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms of Service</a></li>
+</ul>
+
+<hr>
+
+<b>Government</b>
+<ul>
+<li><a href="royalfamily.html">Royal Family</a></li>
+<li><a href="officials.html">Officials</a></li>
+<li><a href="government.html">Structure</a></li>
+<li><a href="elections.html">Elections</a></li>
+<li><a href="history.html">History</a></li>
+</ul>
+
+<hr>
+
+<b>Citizen Services</b>
+<ul>
+<li><a href="citizenship.html">Citizenship</a></li>
+<li><a href="portal.html">Citizen Portal</a></li>
+<li><a href="governmentservices.html">Services</a></li>
+<li><a href="military.html">Military</a></li>
+<li><a href="applytovote.html">Register to Vote</a></li>
+</ul>
+
+</td>
+
+<td class="content">
+
 <p>Historical records of Mabruenia.</p>
 
 <p>
 <b>Search Archives:</b><br>
-<input type="text" id="searchBox" onkeyup="searchArchives()" placeholder="Type to search documents...">
+<input type="text" id="searchBox" onkeyup="searchArchives()" placeholder="Search documents...">
 </p>
 
-<ul id="archiveList">
+<div id="archiveList">
 
-<h2>Founding Documents</h2>
+<h3>Founding Documents</h3>
+<ul>
 <li><a href="archives/Gaelic Kingdom of Mabruenia National Constitution.pdf">Constitution</a></li>
 <li><a href="archives/Declaration of Independence.pdf">Declaration of Independence</a></li>
+</ul>
 
-<h2>Royal Lineage Records</h2>
-<li><a href="archives/Why Mabruenia has the best claim to the Scottish Throne.pdf">Why Mabruenia has the best claim to the Scottish Throne</a></li>
+<h3>Royal Lineage Records</h3>
+<ul>
+<li><a href="archives/Why Mabruenia has the best claim to the Scottish Throne.pdf">
+Why Mabruenia has the best claim to the Scottish Throne</a></li>
+</ul>
 
-<h2>Legislative Documents</h2>
+<h3>Legislative Documents</h3>
+<ul>
 <li><a href="archives/Treason and Disloyalty Act.pdf">Treason and Disloyalty Act</a></li>
-<li><a href="archives/Gaelic Kingdom of Mabruenia National Constitution.pdf">Gaelic Kingdom of Mabruenia National Constitution</a></li>
-<li><a href="archives/Raider and Discord group Suppression Act.pdf">Raider and Discord group Suppression Act</a></li>
-<li><a href="archives/Structure of Laws in the Mabruenian Nation.pdf">Structure of Laws in the Mabruenian Nation (Outdated)</a></li>
+<li><a href="archives/Gaelic Kingdom of Mabruenia National Constitution.pdf">National Constitution</a></li>
+<li><a href="archives/Raider and Discord group Suppression Act.pdf">Raider Suppression Act</a></li>
+<li><a href="archives/Structure of Laws in the Mabruenian Nation.pdf">Structure of Laws (Outdated)</a></li>
 <li><a href="archives/Mabruenian Marriage, death, and births act.pdf">Marriage, Death, and Births Act</a></li>
-<li><a href="archives/Royal Federal Act No. 2025_09.pdf">Royal Federal Act No. 2025_09 (Outdated)</a></li>
-<li><a href="archives/Act of Parliament on National Identification and Verification Act 2025_11.pdf">National Identification and Verification Act</a></li>
-<li><a href="archives/Royal Dress Code of 2025.pdf">Royal Dress Code of 2025</a></li>
-<li><a href="archives/Structure of the Supreme Court of Mabruenia.pdf">Structure of the Supreme Court</a></li>
-<li><a href="archives/Royal Federal Act No. 13 -- School Protection and Safety Act of 2025.pdf">School Protection and Safety Act</a></li>
-<li><a href="archives/Royal Federal Act No. 16, Year 2025 The Constituency Boundaries and Representation Act.pdf">Constituency Boundaries Act</a></li>
+<li><a href="archives/Royal Federal Act No. 2025_09.pdf">Royal Federal Act 2025_09 (Outdated)</a></li>
+<li><a href="archives/Act of Parliament on National Identification and Verification Act 2025_11.pdf">Identification Act</a></li>
+<li><a href="archives/Royal Dress Code of 2025.pdf">Royal Dress Code</a></li>
+<li><a href="archives/Structure of the Supreme Court of Mabruenia.pdf">Supreme Court Structure</a></li>
+<li><a href="archives/Royal Federal Act No. 13 -- School Protection and Safety Act of 2025.pdf">School Protection Act</a></li>
+<li><a href="archives/Royal Federal Act No. 16, Year 2025 The Constituency Boundaries and Representation Act.pdf">Constituency Act</a></li>
 <li><a href="archives/Royal Federal Act No. 17 Year 2025 The Treaty Ratification and Diplomatic Missions Act.pdf">Treaty Ratification Act</a></li>
-<li><a href="archives/Provincial Governance Reorganization Act of Mabruenia.pdf">Provincial Governance Reorganization Act</a></li>
+<li><a href="archives/Provincial Governance Reorganization Act of Mabruenia.pdf">Provincial Governance Act</a></li>
 <li><a href="archives/Royal Federal Act No. 2025_16 Electoral Certification & Executive Transition Act of 2025.pdf">Electoral Certification Act</a></li>
 <li><a href="archives/The Chancellor Impeachment & removal Act.pdf">Chancellor Impeachment Act</a></li>
 <li><a href="archives/Change of Name Act 2025.pdf">Change of Name Act</a></li>
-<li><a href="archives/Equality and Discrimination Act 2025.pdf">Equality and Discrimination Act</a></li>
-<li><a href="archives/Mabruenian Flag Code 2025.pdf">Flag Code 2025</a></li>
-<li><a href="archives/Digital Citizenship and Rights Act.pdf">Digital Citizenship and Rights Act</a></li>
-<li><a href="archives/Civilian Immigration Bureau Creation Act.pdf">Immigration Bureau Creation Act</a></li>
+<li><a href="archives/Equality and Discrimination Act 2025.pdf">Equality Act</a></li>
+<li><a href="archives/Mabruenian Flag Code 2025.pdf">Flag Code</a></li>
+<li><a href="archives/Digital Citizenship and Rights Act.pdf">Digital Citizenship Act</a></li>
+<li><a href="archives/Civilian Immigration Bureau Creation Act.pdf">Immigration Bureau Act</a></li>
+</ul>
 
-<h2>Judicial Documents</h2>
+<h3>Judicial Documents</h3>
+<ul>
 <li><a href="archives/OFFICIAL JUDICIAL REPORT_ Judicial Report on the Matter of Crown vs. Ein (2026).pdf">Crown vs. Ein (2026)</a></li>
 <li><a href="archives/OFFICIAL JUDICIAL REPORT_ Judicial Report on the Matter of Crown vs. Maximus (2026).pdf">Crown vs. Maximus (2026)</a></li>
 <li><a href="archives/OFFICIAL JUDICIAL REPORT_ Judicial Report on the Matter of Crown vs. Andrew (2026).pdf">Crown vs. Andrew (2026)</a></li>
-
-<h2>Military Documents</h2>
-<li><a href="archives/Uniform Military Code of Justice of the United Kingdom of Lillo-Mabruenia (UKLMMCJ).pdf">Military Code of Justice (Outdated)</a></li>
-
 </ul>
 
-<p><a href="index.html">Return Home</a></p>
+<h3>Military Documents</h3>
+<ul>
+<li><a href="archives/Uniform Military Code of Justice of the United Kingdom of Lillo-Mabruenia (UKLMMCJ).pdf">
+Military Code of Justice (Outdated)</a></li>
+</ul>
+
+</div>
+
+</td>
+
+</tr>
+</table>
+
+<div class="site-footer">
+
+<div class="footer-container">
+
+<!-- LEFT -->
+<div class="footer-column">
+  <h2>Gaelic Kingdom of Mabruenia</h2>
+  <p>Official Government Website</p>
+
+  <p><b>Connect With Us</b></p>
+  <p>
+    <a href="https://discord.gg/WcZDzBD2fs">Discord</a><br>
+    <a href="https://x.com/MabruenianGov">Twitter</a><br>
+    <a href="https://www.youtube.com/channel/UCVQLwYnu5GqYO69vae7yRDg">YouTube</a>
+  </p>
+</div>
+
+<!-- MIDDLE -->
+<div class="footer-column">
+  <h3>Legal Notice</h3>
+  <p>
+  All content on this website is property of the Government of Mabruenia.
+  Unauthorized use is prohibited.
+  </p>
+</div>
+
+<!-- RIGHT -->
+<div class="footer-column">
+  <h3>Official Inquiries</h3>
+  <p>Email: mabrueniangov@gmail.com</p>
+
+  <h3>Newsletter</h3>
+  <input type="text" class="footer-input" placeholder="Enter your email">
+  <button class="footer-btn">Subscribe</button>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+  © 2026 Government of Mabruenia. All rights reserved.
+</div>
+
+</div>
 
 </body>
 </html>

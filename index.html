@@ -1,59 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Gaelic Kingdom of Mabruenia - Official Government Site</title>
-</head>
+<link rel="stylesheet" href="style.css">
+
 <script>
 function toggleGovBanner() {
   let content = document.getElementById("govBannerContent");
-  if (content.style.display === "none") {
-    content.style.display = "block";
-  } else {
-    content.style.display = "none";
-  }
+  content.style.display = (content.style.display === "block") ? "none" : "block";
 }
+
+function updateClock() {
+  var now = new Date();
+  var time = now.toLocaleTimeString();
+  document.getElementById("clock").innerHTML = time;
+}
+
+setInterval(updateClock, 1000);
 </script>
-<body bgcolor="#C0C0C0" text="#000000" link="#0000FF" vlink="#800080">
-<div style="background-color:#f0f0f0; border-bottom:1px solid #000; padding:5px; font-size:14px;">
+</head>
 
-<img src="images/flag.webp" alt="Mabruenian Flag" width="30" height="20"
-style="vertical-align:middle;">
+<body>
 
-<span>
- An official website of the Mabruenian Government 
-</span>
+<!-- GOV BANNER -->
+<div class="gov-banner">
+  <img src="flag.webp" alt="Flag" class="flag-small">
 
-<a href="javascript:void(0);" onclick="toggleGovBanner()" style="margin-left:10px;">
-Here's how you know ▼
-</a>
+  <span>An official website of the Mabruenian Government</span>
 
-<div id="govBannerContent" style="display:none; margin-top:5px; padding:5px; border-top:1px solid #000;">
-  <p>
-  ✔ Any website with the <b>mabruenia.org</b> domain is an official site of the Government of Mabruenia.<br>
-  ✔ Official government services and information are provided through this domain.
-  </p>
+  <a href="#" onclick="toggleGovBanner()">Here's how you know ▼</a>
+
+  <div id="govBannerContent" class="gov-banner-content">
+    ✔ Any website with the <b>mabruenia.org</b> domain is official.<br>
+    ✔ Government services are provided through this domain.
+  </div>
 </div>
 
+<!-- HEADER -->
+<div class="site-header">
+  <h1>Gaelic Kingdom of Mabruenia</h1>
+  <h3>Official Government Homepage</h3>
+  <p><b>Nation established: 2023</b></p>
+  <p><b>Established Online: 2026</b></p>
 </div>
-<center>
-<h1>Gaelic Kingdom of Mabruenia</h1>
-<h3>Official Government Homepage</h3>
-<p><b>Nation established: 2023</b></p>
-<p><b>Established Online: 2026</b></p>
-</center>
 
-<hr>
+<!-- MAIN LAYOUT -->
+<table class="main-table">
 
-<table width="100%" border="1">
 <tr>
-<td width="25%" valign="top">
 
-<header>
-  <img src="images/flag.webp" alt="National Flag" width="150" height="100">
-</header>
-<p>
-<font size="1">An offical site for Mabruenia.</font>
-</p>
+<!-- SIDEBAR -->
+<td class="sidebar">
+
+<img src="flag.webp" class="flag-large">
+
+<p class="small-text">An official site for Mabruenia.</p>
+
 <p><b>Current Time in Mabruenia:</b> <span id="clock"></span></p>
 <p><b>Mabruenian Central Time</b></p>
 
@@ -78,149 +81,131 @@ Here's how you know ▼
   updateClock();
 </script>
 
-<b>Navigation</b>
+<hr>
 
+<b>Navigation</b>
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="Archives.html">National Archives</a></li>
-<a href="Decrees.html">Royal Decrees</a></li>
+<li><a href="Decrees.html">Royal Decrees</a></li>
 <li><a href="Offices.html">Government Offices</a></li>
 <li><a href="foreign.html">Foreign Affairs</a></li>
-<li><a href="landclaims.html">Our Land Claims</a></li>
+<li><a href="landclaims.html">Land Claims</a></li>
 <li><a href="symbols.html">National Symbols</a></li>
 <li><a href="siteindex.html">Site Index</a></li>
 <li><a href="forum.html">Government Forum</a></li>
 <li><a href="privacy.html">Privacy Policy</a></li>
 <li><a href="terms.html">Terms of Service</a></li>
-
 </ul>
 
 <hr>
 
 <b>Government Information</b>
-
 <ul>
-<li><a href="royalfamily.html">Meet the Royal Family</a></li>
-<li><a href="officials.html">Elected Officials</a></li>
-<li><a href="government.html">Government Structure</a></li>
+<li><a href="royalfamily.html">Royal Family</a></li>
+<li><a href="officials.html">Officials</a></li>
+<li><a href="government.html">Structure</a></li>
 <li><a href="elections.html">Elections</a></li>
 <li><a href="history.html">History</a></li>
 </ul>
 
 <hr>
 
-<b>Citizen Tab</b>
-
+<b>Citizen Services</b>
 <ul>
 <li><a href="citizenship.html">Citizenship</a></li>
 <li><a href="portal.html">Portal</a></li>
-<li><a href="governmentservices.html">Government Services</a></li>
-<li><a href="military.html">Military Service</a></li>
+<li><a href="governmentservices.html">Services</a></li>
+<li><a href="military.html">Military</a></li>
 <li><a href="applytovote.html">Register to Vote</a></li>
 </ul>
 
 </td>
 
-<td width="75%" valign="top">
+<!-- CONTENT -->
+<td class="content">
 
-<h2>Welcome to the Official Website</h2>
+<h2>Welcome</h2>
 <p>
-Welcome to the Gaelic Kingdom of Mabruenia's official government information service.
-This site provides access to public records, royal announcements, and
-administrative information.
+Welcome to the official government information service of Mabruenia.
+Access public records, royal announcements, and administrative services here.
 </p>
 
 <h3>Latest Royal Announcement</h3>
-<p>Her Majesty has made royal Decree 017: Appointment of Stanley Garland to the Ministry of the Home Office.</p>
+<p>
+Royal Decree 017: Appointment of Stanley Garland to the Ministry of the Home Office.
+</p>
 
 <h3>Government Offices</h3>
 <ul>
-<li>Office of the Soveriegn</li>
+<li>Office of the Sovereign</li>
 <li>Office of the Chancellor</li>
-<li>Office of the Deputy Chancellor</li>
-<li>Ministry of External Affairs and Relations</li>
+<li>Ministry of External Affairs</li>
 <li>Ministry of Justice</li>
-<li>Ministry of War and Defense</li>
+<li>Ministry of Defense</li>
 <li>Ministry of the Home Office</li>
-<li>Ministry of Education and Culture</li>
-<li>Ministry of The Treasury</li>
-<li>Ministry of Agriculture</li>
-<li>Ministry of Digital Management</li>
+<li>Ministry of Education</li>
+<li>Ministry of Treasury</li>
 <li>Royal Archives Agency</li>
-<li>Mabruenian Centrial Intelligence Agency</li>
-<li>Civilian Immigration Bureau</li>
-<li>Mabruenian Elections Office</li>
-<li>Royal Police Service</li>
-
+<li>Intelligence Agency</li>
+<li>Elections Office</li>
 </ul>
 
 <h3>Public Notices</h3>
 <p>
-Citizens are advised to register with the Ministry of the Home Office and the Civilian Immigration Bureau.
-All documentation should be submitted in written or digital form.
+Citizens should register with the Ministry of the Home Office.
+All documentation must be submitted properly.
 </p>
 
 </td>
+
 </tr>
 </table>
 
-<hr>
+<div class="site-footer">
 
-<center>
-<p>
-<a href="contact.html">Contact the Government</a> |
-<a href="accessibility.html">Accessibility</a> |
-<a href="legal.html">Legal Notices</a> |
-<a href="https://discord.gg/WcZDzBD2fs">Join our Discord Server</a> |
-<a href="https://www.youtube.com/channel/UCVQLwYnu5GqYO69vae7yRDg">Subscribe to our YouTube Channel</a> |
-<a href="https://micronations.wiki/wiki/Gaelic_Kingdom_of_Mabruenia">Microwiki Article</a> |
-<a href="https://x.com/MabruenianGov">Follow us on Twitter</a> |
-<a href="https://substack.com/@mabrueniarbs?utm_source=user-menu">Subscribe to our Substack</a> |
-<a href="https://web.fluxer.app/channels/@me">Join our Fluxer Server</a> |
-<a href="https://www.reddit.com/r/Mabrueniacommunity/">Join our Reddit Community</a>
+<div class="footer-container">
 
-</p>
+<!-- LEFT -->
+<div class="footer-column">
+  <h2>Gaelic Kingdom of Mabruenia</h2>
+  <p>Official Government Website</p>
 
-<p>
-<font size="2">Maintained by the Ministry of Digital Management and the Crown.</font>
-</p>
+  <p><b>Connect With Us</b></p>
+  <p>
+    <a href="https://discord.gg/WcZDzBD2fs">Discord</a><br>
+    <a href="https://x.com/MabruenianGov">Twitter</a><br>
+    <a href="https://www.youtube.com/channel/UCVQLwYnu5GqYO69vae7yRDg">YouTube</a>
+  </p>
+</div>
 
-<center>
-<form onsubmit="handleSearch(event)">
-Search Government Records:<br>
-<input type="text" id="searchBox" name="query">
-<input type="submit" value="Search">
-</form>
-</center>
+<!-- MIDDLE -->
+<div class="footer-column">
+  <h3>Legal Notice</h3>
+  <p>
+  All content on this website is property of the Government of Mabruenia.
+  Unauthorized use is prohibited.
+  </p>
+</div>
 
+<!-- RIGHT -->
+<div class="footer-column">
+  <h3>Official Inquiries</h3>
+  <p>Email: mabrueniangov@gmail.com</p>
 
-<script>
-function handleSearch(event) {
-  event.preventDefault();
-  searchIndex();
-}
+  <h3>Newsletter</h3>
+  <input type="text" class="footer-input" placeholder="Enter your email">
+  <button class="footer-btn">Subscribe</button>
+</div>
 
-function searchIndex() {
-  let input = document.getElementById("searchBox").value.toLowerCase();
-  let items = document.querySelectorAll("#siteindex.html li ul li");
+</div>
 
-  if (items.length === 0) {
-    alert("Search only works on the Site Index page.");
-    return;
-  }
+<div class="footer-bottom">
+  © 2026 Government of Mabruenia. All rights reserved.
+</div>
 
-  items.forEach(function(item) {
-    let text = item.textContent.toLowerCase();
-    item.style.display = text.includes(input) ? "" : "none";
-  });
-}
-</script>
-</html?
-
-<p>
-<font size="1">© 2026 Gaelic Kingdom of Mabruenia. All Rights Reserved.</font>
-</p>
-</center>
-
+</div>
 </body>
+
 </html>
+

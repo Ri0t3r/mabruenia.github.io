@@ -1,12 +1,27 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Register</title>
+<meta charset="UTF-8">
+<title>Register | Mabruenia</title>
 <script src="https://sdk.userbase.com/2/userbase.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body bgcolor="#C0C0C0">
+<body>
 
-<h1>Register as Citizen</h1>
+<div class="site-header">
+  <h1>Citizen Registration</h1>
+</div>
+
+<table class="main-table">
+<tr>
+
+<td class="sidebar">
+<img src="flag.webp" class="flag-large">
+<p class="small-text">Official Government Site</p>
+</td>
+
+<td class="content">
 
 <form id="registerForm">
 Username:<br>
@@ -41,10 +56,54 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 });
 </script>
 
-<hr>
+</td>
 
-<h2><b2>Disclaimer</b2></h2>
-<p>Use your real name and citizen ID emailed to you when you sign up.</p>
+</tr>
+</table>
+
+<div class="site-footer">
+
+<div class="footer-container">
+
+<!-- LEFT -->
+<div class="footer-column">
+  <h2>Gaelic Kingdom of Mabruenia</h2>
+  <p>Official Government Website</p>
+
+  <p><b>Connect With Us</b></p>
+  <p>
+    <a href="https://discord.gg/WcZDzBD2fs">Discord</a><br>
+    <a href="https://x.com/MabruenianGov">Twitter</a><br>
+    <a href="https://www.youtube.com/channel/UCVQLwYnu5GqYO69vae7yRDg">YouTube</a>
+  </p>
+</div>
+
+<!-- MIDDLE -->
+<div class="footer-column">
+  <h3>Legal Notice</h3>
+  <p>
+  All content on this website is property of the Government of Mabruenia.
+  Unauthorized use is prohibited.
+  </p>
+</div>
+
+<!-- RIGHT -->
+<div class="footer-column">
+  <h3>Official Inquiries</h3>
+  <p>Email: mabrueniangov@gmail.com</p>
+
+  <h3>Newsletter</h3>
+  <input type="text" class="footer-input" placeholder="Enter your email">
+  <button class="footer-btn">Subscribe</button>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+  © 2026 Government of Mabruenia. All rights reserved.
+</div>
+
+</div>
 
 </body>
 </html>

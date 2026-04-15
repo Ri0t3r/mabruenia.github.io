@@ -1,12 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Site Index</title>
-</head>
-<body bgcolor="#C0C0C0" text="#000000" link="#0000FF" vlink="#800080">
+<meta charset="UTF-8">
+<title>Site Index | Mabruenia</title>
+<link rel="stylesheet" href="style.css">
+
 <script>
 function searchIndex() {
   let input = document.getElementById("searchBox").value.toLowerCase();
-  let items = document.querySelectorAll("ul li");
+  let items = document.querySelectorAll("#siteList li");
 
   items.forEach(function(item) {
     let text = item.textContent.toLowerCase();
@@ -15,86 +17,77 @@ function searchIndex() {
 }
 </script>
 
+</head>
 
+<body>
 
+<div class="site-header">
+  <h1>Site Index (A–Z)</h1>
+</div>
 
-<h1>Site Index (A–Z)</h1>
+<table class="main-table">
+<tr>
+
+<td class="sidebar">
+
+<img src="flag.webp" class="flag-large">
+<p class="small-text">Official Government Site</p>
+
+<hr>
+
+<b>Navigation</b>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="archives.html">Archives</a></li>
+<li><a href="governmentservices.html">Services</a></li>
+<li><a href="military.html">Military</a></li>
+<li><a href="offices.html">Offices</a></li>
+<li><a href="officials.html">Officials</a></li>
+<li><a href="elections.html">Elections</a></li>
+<li><a href="citizenportal.html">Portal</a></li>
+<li><a href="privacy.html">Privacy</a></li>
+<li><a href="terms.html">Terms</a></li>
+</ul>
+
+</td>
+
+<td class="content">
 
 <p>
 <b>Search:</b><br>
 <input type="text" id="searchBox" onkeyup="searchIndex()" placeholder="Type to search...">
 </p>
 
-<table width="100%">
-<tr>
-
-<!-- LEFT COLUMN -->
-<td width="48%" valign="top">
-
 <ul id="siteList">
 
 <li><b>A</b>
   <ul>
-    <li><a href="accessibility.html">Accessibility</a></li>
-    <li><a href="archives.html">Archives, National</a></li>
+    <li><a href="archives.html">Archives</a></li>
   </ul>
 </li>
 
 <li><b>C</b>
   <ul>
     <li><a href="citizenship.html">Citizenship</a></li>
-    <li><a href="contact.html">Contact the Government</a></li>
-    <li><a href="certificate.html">Citizen Certificate</a></li>
-  </ul>
-</li>
-
-<li><b>D</b>
-  <ul>
-    <li><a href="Decrees.html">Decrees, Royal</a></li>
-    <li></li><a href="dashboard.html">Citizen Dashboard</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="citizenportal.html">Citizen Portal</a></li>
   </ul>
 </li>
 
 <li><b>E</b>
   <ul>
     <li><a href="elections.html">Elections</a></li>
-  </ul>
-</li>
-
-<li><b>F</b>
-  <ul>
-    <li><a href="foreign.html">Foreign Affairs</a></li>
+    <li><a href="results2026.html">Election Results 2026</a></li>
   </ul>
 </li>
 
 <li><b>G</b>
   <ul>
-    <li><a href="government.html">Government</a></li>
+    <li><a href="governmentservices.html">Government Services</a></li>
     <li><a href="offices.html">Government Offices</a></li>
     <li><a href="officials.html">Government Officials</a></li>
-    <li><a href="governmentservices.html">Government Services</a></li>
   </ul>
 </li>
-
-</ul>
-
-</td>
-
-<!-- DIVIDER -->
-<td width="4%" valign="top">
-  <center>
-    <table height="100%">
-      <tr>
-        <td bgcolor="#000000" width="1"></td>
-      </tr>
-    </table>
-  </center>
-</td>
-
-<!-- RIGHT COLUMN -->
-<td width="48%" valign="top">
-
-<ul>
 
 <li><b>H</b>
   <ul>
@@ -119,23 +112,22 @@ function searchIndex() {
 
 <li><b>P</b>
   <ul>
-    <li><a href="portal.html">Government Portal</a></li>
-   <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="portal.html">Portal</a></li>
   </ul>
 </li>
 
 <li><b>R</b>
   <ul>
-    <li><a href="results2026.html">Election Results 2026</a></li>
+    <li><a href="register.html">Register</a></li>
     <li><a href="royalfamily.html">Royal Family</a></li>
-    <li><a href="register.html">Register as Citizen</a></li>
   </ul>
 </li>
 
 <li><b>S</b>
   <ul>
-    <li><a href="siteindex.html">Site Index</a></li>
     <li><a href="symbols.html">National Symbols</a></li>
+    <li><a href="siteindex.html">Site Index</a></li>
   </ul>
 </li>
 
@@ -143,10 +135,11 @@ function searchIndex() {
   <ul>
     <li><a href="terms.html">Terms of Service</a></li>
   </ul>
+</li>
 
 <li><b>V</b>
   <ul>
-    <li><a href="voting.html">Voting Information</a></li>
+    <li><a href="voting.html">Voting Procedures</a></li>
   </ul>
 </li>
 
@@ -157,7 +150,49 @@ function searchIndex() {
 </tr>
 </table>
 
-<p><a href="index.html">Return Home</a></p>
+<div class="site-footer">
+
+<div class="footer-container">
+
+<!-- LEFT -->
+<div class="footer-column">
+  <h2>Gaelic Kingdom of Mabruenia</h2>
+  <p>Official Government Website</p>
+
+  <p><b>Connect With Us</b></p>
+  <p>
+    <a href="https://discord.gg/WcZDzBD2fs">Discord</a><br>
+    <a href="https://x.com/MabruenianGov">Twitter</a><br>
+    <a href="https://www.youtube.com/">YouTube</a>
+  </p>
+</div>
+
+<!-- MIDDLE -->
+<div class="footer-column">
+  <h3>Legal Notice</h3>
+  <p>
+  All content on this website is property of the Government of Mabruenia.
+  Unauthorized use is prohibited.
+  </p>
+</div>
+
+<!-- RIGHT -->
+<div class="footer-column">
+  <h3>Official Inquiries</h3>
+  <p>Email: mabrueniangov@gmail.com</p>
+
+  <h3>Newsletter</h3>
+  <input type="text" class="footer-input" placeholder="Enter your email">
+  <button class="footer-btn">Subscribe</button>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+  © 2026 Government of Mabruenia. All rights reserved.
+</div>
+
+</div>
 
 </body>
 </html>

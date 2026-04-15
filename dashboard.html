@@ -1,12 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Citizen Portal</title>
+<link rel="stylesheet" href="style.css">
 <script src="https://sdk.userbase.com/2/userbase.js"></script>
 </head>
 
-<body bgcolor="#C0C0C0">
+<body>
 
-<h1>Citizen Portal</h1>
+<div class="site-header">
+  <h1>Citizen Portal</h1>
+</div>
+
+<table class="main-table">
+<tr>
+
+<td class="sidebar">
+  <b>Navigation</b>
+  <ul>
+    <li><a href="military.html">Military</a></li>
+  </ul>
+</td>
+
+<td class="content">
 
 <p id="user"></p>
 
@@ -18,24 +35,24 @@
 
 <button onclick="logout()">Log Out</button>
 
+</td>
+
+</tr>
+</table>
+
 <script>
 userbase.init({ appId: "939b19a5-62b7-42ea-8c6f-bf936c613615" });
 
 async function init() {
-  try {
-    const user = await userbase.getCurrentUser();
+  const user = await userbase.getCurrentUser();
 
-    if (!user) {
-      window.location.href = "login.html";
-      return;
-    }
-
-    document.getElementById("user").textContent =
-      "Logged in as: " + user.username;
-
-  } catch (e) {
-    console.log(e);
+  if (!user) {
+    window.location.href = "login.html";
+    return;
   }
+
+  document.getElementById("user").textContent =
+    "Logged in as: " + user.username;
 }
 
 async function logout() {

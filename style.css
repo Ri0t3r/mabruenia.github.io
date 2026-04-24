@@ -145,7 +145,7 @@ input[type="submit"]:hover {
   background: #0033cc;
 }
 
-/* FOOTER */
+/* SITE FOOTER */
 .site-footer {
   background: #1f3b57;
   color: #ffffff;
@@ -186,7 +186,7 @@ input[type="submit"]:hover {
   font-size: 12px;
 }
 
-/* INPUT + BUTTON */
+/* FOOTER INPUT + BUTTON */
 .footer-input {
   padding: 8px;
   width: 70%;
@@ -199,8 +199,15 @@ input[type="submit"]:hover {
   background: #00bcd4;
   border: none;
   color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  /* MUSEUM GRID */
+.footer-btn:hover {
+  background: #0097a7;
+}
+
+/* MUSEUM GRID */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -239,11 +246,4 @@ input[type="submit"]:hover {
 /* DESCRIPTION */
 .gallery-item p {
   font-size: 12px;
-}
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.footer-btn:hover {
-  background: #0097a7;
 }

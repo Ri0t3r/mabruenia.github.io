@@ -1,11 +1,15 @@
-/* GENERAL */
+/* =========================
+   GENERAL
+========================= */
 body {
   margin: 0;
   background-color: #e6e6e6;
   font-family: Arial, sans-serif;
 }
 
-/* GOV BANNER */
+/* =========================
+   GOV BANNER
+========================= */
 .gov-banner {
   background-color: #f8f9fa;
   border-bottom: 2px solid black;
@@ -26,7 +30,9 @@ body {
   padding-top: 5px;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 .site-header {
   text-align: center;
   background: white;
@@ -39,21 +45,9 @@ body {
   color: navy;
 }
 
-.header-banner {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.header-banner img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-top: 2px solid navy;
-  border-bottom: 2px solid navy;
-}
-
-/* TABLE LAYOUT */
+/* =========================
+   TABLE LAYOUT (3 COLUMN FIX)
+========================= */
 .main-table {
   width: 100%;
   border-collapse: collapse;
@@ -64,9 +58,11 @@ body {
   vertical-align: top;
 }
 
-/* SIDEBAR */
+/* =========================
+   LEFT SIDEBAR
+========================= */
 .sidebar {
-  width: 25%;
+  width: 20%;
   background-color: #dcdcdc;
   padding: 10px;
 }
@@ -78,25 +74,13 @@ body {
 .sidebar b {
   display: block;
   margin-top: 10px;
-
-.weather-sidebar {
-  width: 220px;
-  background: #f2f6f9;
-  border-left: 2px solid #ccc;
-  padding: 10px;
-  vertical-align: top;
 }
 
-.weather-box {
-  background: white;
-  border: 1px solid #bbb;
-  padding: 10px;
-  font-size: 14px;  
-}
-
-/* CONTENT */
+/* =========================
+   CONTENT (CENTER COLUMN)
+========================= */
 .content {
-  width: 75%;
+  width: 60%;
   background: white;
   padding: 15px;
 }
@@ -109,57 +93,26 @@ body {
   color: navy;
 }
 
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 15px;
+/* =========================
+   RIGHT WEATHER SIDEBAR
+========================= */
+.weather-sidebar {
+  width: 20%;
+  background: #f2f6f9;
+  border-left: 2px solid #ccc;
+  padding: 10px;
+}
+
+.weather-box {
+  background: white;
+  border: 1px solid #bbb;
+  padding: 10px;
   font-size: 14px;
 }
 
-/* IMAGES */
-.flag-small {
-  width: 30px;
-  vertical-align: middle;
-}
-
-.flag-large {
-  width: 150px;
-}
-
-/* TEXT */
-.small-text {
-  font-size: 12px;
-}
-
-/* LINKS */
-a {
-  color: #0033cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* FORMS */
-input[type="text"] {
-  padding: 5px;
-  border: 1px solid black;
-}
-
-input[type="submit"] {
-  padding: 5px 10px;
-  background: navy;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background: #0033cc;
-}
-
-/* SITE FOOTER */
+/* =========================
+   FOOTER
+========================= */
 .site-footer {
   background: #1f3b57;
   color: #ffffff;
@@ -200,7 +153,60 @@ input[type="submit"]:hover {
   font-size: 12px;
 }
 
-/* FOOTER INPUT + BUTTON */
+/* =========================
+   IMAGES
+========================= */
+.flag-small {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.flag-large {
+  width: 150px;
+}
+
+/* =========================
+   TEXT
+========================= */
+.small-text {
+  font-size: 12px;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  color: #0033cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   FORMS
+========================= */
+input[type="text"] {
+  padding: 5px;
+  border: 1px solid black;
+}
+
+input[type="submit"] {
+  padding: 5px 10px;
+  background: navy;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #0033cc;
+}
+
+/* =========================
+   FOOTER INPUTS
+========================= */
 .footer-input {
   padding: 8px;
   width: 70%;
@@ -221,7 +227,9 @@ input[type="submit"]:hover {
   background: #0097a7;
 }
 
-/* MUSEUM GRID */
+/* =========================
+   GALLERY GRID (UNTOUCHED BUT CLEAN)
+========================= */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -229,7 +237,6 @@ input[type="submit"]:hover {
   margin-top: 20px;
 }
 
-/* CARD */
 .gallery-item {
   border: 1px solid #999;
   background: #f5f5f5;
@@ -243,7 +250,6 @@ input[type="submit"]:hover {
   transform: scale(1.03);
 }
 
-/* IMAGE */
 .gallery-item img {
   width: 100%;
   height: 150px;
@@ -252,12 +258,10 @@ input[type="submit"]:hover {
   margin-bottom: 10px;
 }
 
-/* TITLE */
 .gallery-item h4 {
   margin: 5px 0;
 }
 
-/* DESCRIPTION */
 .gallery-item p {
   font-size: 12px;
 }

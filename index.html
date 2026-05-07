@@ -8,31 +8,29 @@
 <script>
 function toggleGovBanner() {
   let content = document.getElementById("govBannerContent");
-  content.style.display = (content.style.display === "block") ? "none" : "block";
+  content.style.display =
+    (content.style.display === "block") ? "none" : "block";
 }
 
+/* SINGLE CLOCK FUNCTION (FIXED) */
 function updateClock() {
-  var now = new Date();
-  var time = now.toLocaleTimeString();
-  document.getElementById("clock").innerHTML = time;
+  var options = {
+    timeZone: 'America/Denver',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  };
+
+  document.getElementById("clock").innerHTML =
+    new Date().toLocaleTimeString('en-US', options);
 }
 
 setInterval(updateClock, 1000);
 </script>
+
 </head>
 
-<script>
-!function(d,s,id){
-  var js,fjs=d.getElementsByTagName(s)[0];
-  if(!d.getElementById(id)){
-    js=d.createElement(s);
-    js.id=id;
-    js.src='https://weatherwidget.io/js/widget.min.js';
-    fjs.parentNode.insertBefore(js,fjs);
-  }
-}(document,'script','weatherwidget-io-js');
-</script>
-  
 <body>
 
 <!-- GOV BANNER -->
@@ -61,6 +59,7 @@ setInterval(updateClock, 1000);
 <table class="main-table">
 <tr>
 
+<!-- LEFT SIDEBAR -->
 <td class="sidebar">
 
 <img src="flag.webp" class="flag-large">
@@ -70,28 +69,9 @@ setInterval(updateClock, 1000);
 <p><b>Current Time in Mabruenia:</b> <span id="clock"></span></p>
 <p><b>Mabruenian Central Time</b></p>
 
-<script>
-function updateClock() {
-  var options = {
-    timeZone: 'America/Denver',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true
-  };
-
-  var now = new Date();
-  document.getElementById("clock").innerHTML =
-    now.toLocaleTimeString('en-US', options);
-}
-
-setInterval(updateClock, 1000);
-updateClock();
-</script>
-
 <hr>
 
-<!-- WEATHER WIDGET (IMPORTANT: exact format + script BELOW page content) -->
+<!-- WEATHER WIDGET -->
 <a class="weatherwidget-io"
    href="https://forecast7.com/en/32d32n106d76/las-cruces/"
    data-label_1="Gaelic Kingdom of Mabruenia"
@@ -142,24 +122,9 @@ updateClock();
 
 </td>
 
-<td class="weather-sidebar">
-
-<h3>National Weather Service</h3>
-
-<div class="weather-box">
-  <p><b>Region:</b> Mabruenia Zone (Las Cruces)</p>
-  <p><b>Status:</b> Active Monitoring</p>
-
-  <p><b>Temp:</b> <span id="temp">--</span> °F</p>
-  <p><b>Wind:</b> <span id="wind">--</span> mph</p>
-  <p><b>Condition:</b> <span id="condition">--</span></p>
-</div>
-
-</td>
-  
 <!-- CONTENT -->
 <td class="content">
-  
+
 <h2>Welcome</h2>
 <p>
 Welcome to the official government information service of Mabruenia.
@@ -168,7 +133,10 @@ Access public records, royal announcements, and administrative services here.
 
 <h3>Latest Royal Announcement</h3>
 <p>
-Check out our Microwiki article! <a href="https://micronations.wiki/wiki/Gaelic_Kingdom_of_Mabruenia">Microwiki</a>
+Check out our Microwiki article!
+<a href="https://micronations.wiki/wiki/Gaelic_Kingdom_of_Mabruenia">
+Microwiki
+</a>
 </p>
 
 <h3>Government Offices</h3>
@@ -201,14 +169,30 @@ All documentation must be submitted properly.
 
 </td>
 
+<!-- RIGHT SIDEBAR -->
+<td class="weather-sidebar">
+
+<h3>National Weather Service</h3>
+
+<div class="weather-box">
+  <p><b>Region:</b> Mabruenia Zone (Las Cruces)</p>
+  <p><b>Status:</b> Active Monitoring</p>
+
+  <p><b>Temp:</b> <span id="temp">--</span> °F</p>
+  <p><b>Wind:</b> <span id="wind">--</span> mph</p>
+  <p><b>Condition:</b> <span id="condition">--</span></p>
+</div>
+
+</td>
+
 </tr>
 </table>
 
+<!-- FOOTER -->
 <div class="site-footer">
 
 <div class="footer-container">
 
-<!-- LEFT -->
 <div class="footer-column">
   <h2>Gaelic Kingdom of Mabruenia</h2>
   <p>Official Government Website</p>
@@ -221,16 +205,14 @@ All documentation must be submitted properly.
   </p>
 </div>
 
-<!-- MIDDLE -->
 <div class="footer-column">
   <h3>Legal Notice</h3>
   <p>
-  All content on this website is property of the Government of Mabruenia.
-  Unauthorized use is prohibited.
+    All content on this website is property of the Government of Mabruenia.
+    Unauthorized use is prohibited.
   </p>
 </div>
 
-<!-- RIGHT -->
 <div class="footer-column">
   <h3>Official Inquiries</h3>
   <p>Email: mabrueniangov@gmail.com</p>
@@ -245,12 +227,14 @@ All documentation must be submitted properly.
 <div class="footer-bottom">
   © 2026 Government of Mabruenia. All rights reserved.
 </div>
-  
+
 </div>
-</body>
+
+<!-- WEATHER API -->
 <script>
 async function loadWeather() {
-  const url = "https://api.open-meteo.com/v1/forecast?latitude=32.3199&longitude=-106.7637&current=temperature_2m,wind_speed_10m,weather_code&temperature_unit=fahrenheit&windspeed_unit=mph";
+  const url =
+    "https://api.open-meteo.com/v1/forecast?latitude=32.3199&longitude=-106.7637&current=temperature_2m,wind_speed_10m,weather_code&temperature_unit=fahrenheit&windspeed_unit=mph";
 
   try {
     const res = await fetch(url);
@@ -262,10 +246,10 @@ async function loadWeather() {
     document.getElementById("wind").innerText = c.wind_speed_10m;
 
     let condition = "Clear";
-    if (c.weather_code >= 80) condition = "Rain Showers";
     if (c.weather_code >= 95) condition = "Thunderstorm";
-    if (c.weather_code >= 71) condition = "Snow";
-    if (c.weather_code >= 45) condition = "Fog";
+    else if (c.weather_code >= 80) condition = "Rain Showers";
+    else if (c.weather_code >= 71) condition = "Snow";
+    else if (c.weather_code >= 45) condition = "Fog";
 
     document.getElementById("condition").innerText = condition;
 
@@ -277,5 +261,19 @@ async function loadWeather() {
 loadWeather();
 setInterval(loadWeather, 300000);
 </script>
-</html>
 
+<!-- WEATHER WIDGET SCRIPT -->
+<script>
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){
+    js=d.createElement(s);
+    js.id=id;
+    js.src='https://weatherwidget.io/js/widget.min.js';
+    fjs.parentNode.insertBefore(js,fjs);
+  }
+}(document,'script','weatherwidget-io-js');
+</script>
+
+</body>
+</html>

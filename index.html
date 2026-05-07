@@ -59,10 +59,8 @@ setInterval(updateClock, 1000);
 
 <!-- MAIN LAYOUT -->
 <table class="main-table">
-
 <tr>
 
-<!-- SIDEBAR -->
 <td class="sidebar">
 
 <img src="flag.webp" class="flag-large">
@@ -144,9 +142,24 @@ updateClock();
 
 </td>
 
+<td class="weather-sidebar">
+
+<h3>National Weather Service</h3>
+
+<div class="weather-box">
+  <p><b>Region:</b> Mabruenia Zone (Las Cruces)</p>
+  <p><b>Status:</b> Active Monitoring</p>
+
+  <p><b>Temp:</b> <span id="temp">--</span> °F</p>
+  <p><b>Wind:</b> <span id="wind">--</span> mph</p>
+  <p><b>Condition:</b> <span id="condition">--</span></p>
+</div>
+
+</td>
+  
 <!-- CONTENT -->
 <td class="content">
-
+  
 <h2>Welcome</h2>
 <p>
 Welcome to the official government information service of Mabruenia.

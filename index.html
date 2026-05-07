@@ -21,6 +21,18 @@ setInterval(updateClock, 1000);
 </script>
 </head>
 
+<script>
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){
+    js=d.createElement(s);
+    js.id=id;
+    js.src='https://weatherwidget.io/js/widget.min.js';
+    fjs.parentNode.insertBefore(js,fjs);
+  }
+}(document,'script','weatherwidget-io-js');
+</script>
+  
 <body>
 
 <!-- GOV BANNER -->
@@ -61,38 +73,35 @@ setInterval(updateClock, 1000);
 <p><b>Mabruenian Central Time</b></p>
 
 <script>
-  function updateClock() {
-    // New Mexico is UTC-6 during Daylight Savings (MDT) and UTC-7 otherwise (MST)
-    // This uses 'en-US' and the 'America/Denver' time zone to stay accurate automatically
-    var options = {
-      timeZone: 'America/Denver',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true
-    };
-    
-    var now = new Date();
-    var mabrueniaTime = now.toLocaleTimeString('en-US', options);
-    document.getElementById("clock").innerHTML = mabrueniaTime;
-  }
+function updateClock() {
+  var options = {
+    timeZone: 'America/Denver',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  };
 
-  setInterval(updateClock, 1000);
-  updateClock();
+  var now = new Date();
+  document.getElementById("clock").innerHTML =
+    now.toLocaleTimeString('en-US', options);
+}
+
+setInterval(updateClock, 1000);
+updateClock();
 </script>
 
 <hr>
 
-<!-- WEATHER WIDGET -->
+<!-- WEATHER WIDGET (IMPORTANT: exact format + script BELOW page content) -->
 <a class="weatherwidget-io"
    href="https://forecast7.com/en/32d32n106d76/las-cruces/"
    data-label_1="Gaelic Kingdom of Mabruenia"
    data-label_2="WEATHER"
    data-theme="original">
-   Gaelic Kingdom of Mabruenia WEATHER
+   Mabruenia Weather
 </a>
 
-  
 <hr>
 
 <b>Navigation</b>

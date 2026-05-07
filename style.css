@@ -1,15 +1,11 @@
-/* =========================
-   GENERAL
-========================= */
+/* GENERAL */
 body {
   margin: 0;
   background-color: #e6e6e6;
   font-family: Arial, sans-serif;
 }
 
-/* =========================
-   GOV BANNER
-========================= */
+/* GOV BANNER */
 .gov-banner {
   background-color: #f8f9fa;
   border-bottom: 2px solid black;
@@ -30,9 +26,7 @@ body {
   padding-top: 5px;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 .site-header {
   text-align: center;
   background: white;
@@ -45,9 +39,21 @@ body {
   color: navy;
 }
 
-/* =========================
-   TABLE LAYOUT (3 COLUMN FIX)
-========================= */
+.header-banner {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.header-banner img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-top: 2px solid navy;
+  border-bottom: 2px solid navy;
+}
+
+/* TABLE LAYOUT */
 .main-table {
   width: 100%;
   border-collapse: collapse;
@@ -58,11 +64,9 @@ body {
   vertical-align: top;
 }
 
-/* =========================
-   LEFT SIDEBAR
-========================= */
+/* SIDEBAR */
 .sidebar {
-  width: 20%;
+  width: 25%;
   background-color: #dcdcdc;
   padding: 10px;
 }
@@ -76,11 +80,9 @@ body {
   margin-top: 10px;
 }
 
-/* =========================
-   CONTENT (CENTER COLUMN)
-========================= */
+/* CONTENT */
 .content {
-  width: 60%;
+  width: 75%;
   background: white;
   padding: 15px;
 }
@@ -93,26 +95,57 @@ body {
   color: navy;
 }
 
-/* =========================
-   RIGHT WEATHER SIDEBAR
-========================= */
-.weather-sidebar {
-  width: 20%;
-  background: #f2f6f9;
-  border-left: 2px solid #ccc;
-  padding: 10px;
-}
-
-.weather-box {
-  background: white;
-  border: 1px solid #bbb;
-  padding: 10px;
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 15px;
   font-size: 14px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* IMAGES */
+.flag-small {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.flag-large {
+  width: 150px;
+}
+
+/* TEXT */
+.small-text {
+  font-size: 12px;
+}
+
+/* LINKS */
+a {
+  color: #0033cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* FORMS */
+input[type="text"] {
+  padding: 5px;
+  border: 1px solid black;
+}
+
+input[type="submit"] {
+  padding: 5px 10px;
+  background: navy;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #0033cc;
+}
+
+/* FOOTER */
 .site-footer {
   background: #1f3b57;
   color: #ffffff;
@@ -153,60 +186,7 @@ body {
   font-size: 12px;
 }
 
-/* =========================
-   IMAGES
-========================= */
-.flag-small {
-  width: 30px;
-  vertical-align: middle;
-}
-
-.flag-large {
-  width: 150px;
-}
-
-/* =========================
-   TEXT
-========================= */
-.small-text {
-  font-size: 12px;
-}
-
-/* =========================
-   LINKS
-========================= */
-a {
-  color: #0033cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   FORMS
-========================= */
-input[type="text"] {
-  padding: 5px;
-  border: 1px solid black;
-}
-
-input[type="submit"] {
-  padding: 5px 10px;
-  background: navy;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background: #0033cc;
-}
-
-/* =========================
-   FOOTER INPUTS
-========================= */
+/* INPUT + BUTTON */
 .footer-input {
   padding: 8px;
   width: 70%;
@@ -225,43 +205,4 @@ input[type="submit"]:hover {
 
 .footer-btn:hover {
   background: #0097a7;
-}
-
-/* =========================
-   GALLERY GRID (UNTOUCHED BUT CLEAN)
-========================= */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.gallery-item {
-  border: 1px solid #999;
-  background: #f5f5f5;
-  padding: 10px;
-  text-align: center;
-  border-radius: 6px;
-  transition: transform 0.2s ease;
-}
-
-.gallery-item:hover {
-  transform: scale(1.03);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-  background: white;
-  margin-bottom: 10px;
-}
-
-.gallery-item h4 {
-  margin: 5px 0;
-}
-
-.gallery-item p {
-  font-size: 12px;
 }

@@ -245,9 +245,37 @@ All documentation must be submitted properly.
 <div class="footer-bottom">
   © 2026 Government of Mabruenia. All rights reserved.
 </div>
-
+  
 </div>
 </body>
+<script>
+async function loadWeather() {
+  const url = "https://api.open-meteo.com/v1/forecast?latitude=32.3199&longitude=-106.7637&current=temperature_2m,wind_speed_10m,weather_code&temperature_unit=fahrenheit&windspeed_unit=mph";
 
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    const c = data.current;
+
+    document.getElementById("temp").innerText = c.temperature_2m;
+    document.getElementById("wind").innerText = c.wind_speed_10m;
+
+    let condition = "Clear";
+    if (c.weather_code >= 80) condition = "Rain Showers";
+    if (c.weather_code >= 95) condition = "Thunderstorm";
+    if (c.weather_code >= 71) condition = "Snow";
+    if (c.weather_code >= 45) condition = "Fog";
+
+    document.getElementById("condition").innerText = condition;
+
+  } catch (e) {
+    document.getElementById("condition").innerText = "Unavailable";
+  }
+}
+
+loadWeather();
+setInterval(loadWeather, 300000);
+</script>
 </html>
 

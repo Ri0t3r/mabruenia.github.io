@@ -78,6 +78,20 @@ body {
 .sidebar b {
   display: block;
   margin-top: 10px;
+
+.weather-sidebar {
+  width: 220px;
+  background: #f2f6f9;
+  border-left: 2px solid #ccc;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.weather-box {
+  background: white;
+  border: 1px solid #bbb;
+  padding: 10px;
+  font-size: 14px;  
 }
 
 /* CONTENT */

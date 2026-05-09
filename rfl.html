@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Royal Federal Laws and Regulations | Mabruenia</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+function searchLaws() {
+  let input = document.getElementById("lawSearch").value.toLowerCase();
+  let laws = document.querySelectorAll(".law-entry");
+
+  laws.forEach(function(law) {
+    let text = law.textContent.toLowerCase();
+
+    if (text.includes(input)) {
+      law.style.display = "block";
+    } else {
+      law.style.display = "none";
+    }
+  });
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="site-header">
+  <h1>Royal Federal Laws and Regulations</h1>
+  <p>Official Legal Information Service of the Gaelic Kingdom of Mabruenia</p>
+</div>
+
+<table class="main-table">
+<tr>
+
+<!-- LEFT SIDEBAR -->
+<td class="sidebar" style="width:20%; vertical-align:top;">
+
+<img src="flag.webp" class="flag-large">
+
+<p class="small-text">
+Official Government Legal Portal
+</p>
+
+<hr>
+
+<b>Navigation</b>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="Archives.html">National Archives</a></li>
+<li><a href="Decrees.html">Royal Decrees</a></li>
+<li><a href="government.html">Government Structure</a></li>
+<li><a href="history.html">National History</a></li>
+<li><a href="forum.html">Government Forum</a></li>
+</ul>
+
+<hr>
+
+<b>Legal Sections</b>
+
+<ul>
+<li><a href="#constitutional">Constitutional Law</a></li>
+<li><a href="#criminal">Criminal Law</a></li>
+<li><a href="#citizenship">Citizenship Law</a></li>
+<li><a href="#military">Military Regulations</a></li>
+<li><a href="#administrative">Administrative Law</a></li>
+</ul>
+
+</td>
+
+<!-- MAIN CONTENT -->
+<td class="content" style="width:60%; vertical-align:top;">
+
+<h2>Research Royal Federal Laws</h2>
+
+<p>
+Search active laws, legal codes, royal regulations, and federal directives.
+</p>
+
+<input
+type="text"
+id="lawSearch"
+placeholder="Search laws..."
+onkeyup="searchLaws()"
+style="width:100%; padding:10px; margin-bottom:20px;"
+>
+
+<hr>
+
+<!-- LAW ENTRY -->
+<div class="law-entry">
+
+<h3 id="constitutional">
+Constutition of Mabruenia
+</h3>
+
+<p>The Constutition of the Gaelic Kingdom of Mabruenia establishes
+the structure of government, powers of the Crown, and rights of citizens.
+</p>
+
+<a href="constitution.html">Constitution</a>
+
+<p>
+<b>Status:</b> Active
+</p>
+
+<h3 id="constitutional">
+Declaration of Independence
+</h3>
+
+<p>The Declaration of Independence of the Gaelic Kingdom of Mabruenia declares
+    the sovereignity and independence of the Mabruenian State from the United States of America.
+</p>
+
+<a href="dei.html">Declaration of Independence</a>
+
+<p>
+<b>Status:</b>Active
+</p>
+
+</div>
+
+<hr>
+
+<div class="law-entry">
+
+</div>
+
+</td>
+
+<!-- RIGHT SIDEBAR -->
+<td class="sidebar" style="width:20%; vertical-align:top; background:#e6e6e6; padding:10px;">
+
+<b>Legal Information</b>
+
+<p>
+<b>Authority:</b><br>
+The Crown and Parliament
+</p>
+
+<hr>
+
+<b>Legal Status</b>
+
+<p>
+All laws displayed on this page are official
+federal legal instruments recognized by the Government of Mabruenia.
+</p>
+
+<hr>
+
+<b>Legal Resources</b>
+
+<ul>
+<li><a href="Decrees.html">Royal Decrees</a></li>
+<li><a href="Archives.html">National Archives</a></li>
+<li><a href="constitution.html">Constitution</a></li>
+</ul>
+
+<hr>
+
+<b>Need Assistance?</b>
+
+<p>
+<a href="contact.html">Contact the Government</a>
+</p>
+
+</td>
+
+</tr>
+</table>
+
+<!-- FOOTER -->
+<div class="site-footer">
+
+<div class="footer-container">
+
+<div class="footer-column">
+<h2>Gaelic Kingdom of Mabruenia</h2>
+<p>Official Government Website</p>
+</div>
+
+<div class="footer-column">
+<h3>Legal Notice</h3>
+<p>
+All legal information is maintained by the Ministry of Justice.
+</p>
+</div>
+
+<div class="footer-column">
+<h3>Official Inquiries</h3>
+<p>Email: mabrueniangov@gmail.com</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Government of Mabruenia. All rights reserved.
+</div>
+
+</div>
+
+</body>
+</html>

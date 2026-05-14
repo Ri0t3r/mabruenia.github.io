@@ -254,3 +254,29 @@ input[type="submit"]:hover {
   font-size: 14px;
   line-height: 1.5;
 }
+
+/* WIKITABLES */
+
+.wikitable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background: white;
+}
+
+.wikitable th {
+  background: #d9e2f2;
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: left;
+}
+
+.wikitable td {
+  border: 1px solid #999;
+  padding: 8px;
+}
+
+.wikitable tr:nth-child(even) {
+  background: #f5f5f5;
+}
